@@ -12,9 +12,9 @@ const port = process.env.PORT || 5000;
 //Middleware
 app.use(cors());
 app.use(express.json());
-const uri = 'mongodb://mongo:lvd9wTLr6NjeSrR1xGiC@containers-us-west-31.railway.app:6766'
+// const uri = 'mongodb://mongo:lvd9wTLr6NjeSrR1xGiC@containers-us-west-31.railway.app:6766'
 
-// const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.USER_PASS}@cluster0.5wn8ndj.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.USER_PASS}@cluster0.5wn8ndj.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
